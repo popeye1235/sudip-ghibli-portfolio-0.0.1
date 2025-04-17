@@ -52,7 +52,7 @@ const HeroSection = () => {
               that solve real-world problems.
             </p> */}
 
-            <div className="flex items-center gap-4 pt-4">
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-start gap-4 pt-4">
               <Button className="gap-2 px-6 py-6 text-base rounded-full">
                 <ArrowLeft size={18} />
                 <a
@@ -72,7 +72,7 @@ const HeroSection = () => {
                 </a>
                 <ArrowRight size={18} />
               </Button>
-              <div className="flex items-center gap-3">
+              <div className="hidden sm:flex items-center gap-3">
                 <a
                   href="https://github.com/popeye1235"
                   target="_blank"
@@ -130,7 +130,6 @@ const HeroSection = () => {
           </div>
         </div>
 
-        {/* Right side image - 50% width on desktop, full height on mobile */}
         <div className="w-full lg:w-1/2 h-[50vh] lg:h-screen order-1 lg:order-2 relative">
           <div className="hidden lg:block w-full h-full">
             <MaskedImage
