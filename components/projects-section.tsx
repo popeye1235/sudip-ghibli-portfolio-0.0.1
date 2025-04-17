@@ -72,8 +72,8 @@ const ProjectsSection = () => {
       description:
         "A portfolio website for matching this Ghibli trend.",
       tags: ["NextJS", "Tailwind CSS", "Shadcn/UI - Matsu Theme", "Framer motion"],
-      liveLink: "",
-      githubLink: "",
+      liveLink: "https://sudip-ghibli-portfolio.vercel.app/",
+      githubLink: "https://github.com/popeye1235/sudip-ghibli-portfolio-0.0.1",
     },
   ];
 
