@@ -11,7 +11,7 @@ const AboutSection = () => {
     >
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
-          <div className="space-y-2 mb-8">
+          <div className="space-y-2 mb-8 text-center">
             <h2 className="text-xl text-primary font-medium">About Me</h2>
             <h3 className="text-3xl md:text-5xl font-bold">My Journey</h3>
             <Separator className="w-24 h-1 bg-primary rounded-full mt-4" />

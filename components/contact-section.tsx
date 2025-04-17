@@ -43,7 +43,7 @@ const ContactSection = () => {
     <section id="contact" className="min-h-screen flex items-center py-20 bg-muted/10">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-16 space-y-3">
+          <div className="text-center mb-8 space-y-3">
             <h2 className="text-xl text-primary font-medium">Get In Touch</h2>
             <h3 className="text-3xl md:text-5xl font-bold">Let&apos;s Work Together</h3>
             <Separator className="w-24 h-1 bg-primary rounded-full mx-auto mt-4" />
