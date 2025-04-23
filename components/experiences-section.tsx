@@ -27,7 +27,7 @@ CSS.`,
       link: "https://byjus.com/",
       startDate: "Oct 2020",
       endDate: "Mar 2022",
-      position: "Operations Team lead(Pre Sales)",
+      position: "Operations Team lead",
       location: "Remote, India"
     },
     {
