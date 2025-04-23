@@ -35,9 +35,9 @@ CSS.`,
       description: "Performed frontend development using Angular 7, quickly learned Material UI and Bootstrap, contributing to successful project launches and enhanced user interfaces.",
       tags: ["Angular", "JavaScript", "HTML/CSS", "SCSS/SASS", "Bootstrap"],
       link: "https://synproxsolutions.com/",
-      startDate: "Jun 2020",
+      startDate: "Jan 2020",
       endDate: "Sept 2020",
-      position: "Web Developer",
+      position: "Web Developer Intern",
       location: "Kolkata, India"
     }
   ];
