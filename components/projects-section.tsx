@@ -36,6 +36,14 @@ const ProjectsSection = () => {
       githubLink: "",
     },
     {
+      title: "Landing page",
+      description:
+        "Contributed to PW’s main landing page using Angular and Ionic, where the user can see the scheduled classes, batch details, recent learning, cohorts, etc.",
+      tags: ["Angular", "Ionic", "RxJS"],
+      liveLink: "https://www.pw.live/study/batches",
+      githubLink: "",
+    },
+    {
       title: "PW Test Series and Test Clonning",
       description:
         "Build an online subjective and objective test platform from scratch for students where after attempting this test student can check the result of this test, can see the leaderboard, suggested answers. Copying test series inside another test-series or merging together.",

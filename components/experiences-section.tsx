@@ -22,11 +22,21 @@ CSS.`,
     },
     {
       name: "BYJUS",
+      description: "Took some time to brush-up my technical skills and again joined technical team of BYJUS through IJP. Worked as ASE to build Dashboard page, Testimonial and Rating Module using React and Bootstrap.",
+      tags: ["React", "Redux", "Tailwind CSS", "Bootstrap", "JavaScript", "HTML/CSS"],
+      link: "https://byjus.com/",
+      startDate: "Aug 2021",
+      endDate: "Mar 2022",
+      position: "Associate Software Engineer",
+      location: "Remote, India"
+    },
+    {
+      name: "BYJUS",
       description: "Led a team segment to clarify job roles, managed client interactions, and oversaw CRM tool and lead management processes. Recognized as a top performer in the eastern zone, excelled in direct client handling, and effectively identified and resolved students’ needs and problems.",
       tags: ["CRM", "Client Handling", "Lead Management", "Operations", "Excel"],
       link: "https://byjus.com/",
       startDate: "Oct 2020",
-      endDate: "Mar 2022",
+      endDate: "July 2021",
       position: "Operations Team lead",
       location: "Remote, India"
     },
