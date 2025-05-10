@@ -56,7 +56,7 @@ const HeroSection = () => {
               <Button className="gap-2 px-6 py-6 text-base rounded-full">
                 <ArrowLeft size={18} />
                 <a
-                  href="https://drive.google.com/file/d/1NimurCnhfBel354JMiHfFjFIJZPaUfRI/view?usp=drive_link"
+                  href="https://drive.google.com/file/d/1fpsVwwJiAMZqo4YIYkxMaiBVb8ZVywb3/view?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
