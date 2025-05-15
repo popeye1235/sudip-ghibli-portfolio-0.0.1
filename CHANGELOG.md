@@ -1,5 +1,10 @@
 # Changelog
 
+## [1.1.2] - 2025-05-15
+### Added
+- Clean up done
+- WIP for enhancement
+
 ## [1.1.1] - 2025-05-15
 ### Added
 - Flipping image animation in HeroSection
