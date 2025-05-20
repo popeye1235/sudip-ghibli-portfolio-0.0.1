@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.1.3] - 2025-05-20
+### Added
+- Shape changes in hero section
+
 ## [1.1.2] - 2025-05-15
 ### Added
 - Clean up done

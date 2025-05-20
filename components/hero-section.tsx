@@ -48,7 +48,7 @@ const FlipImage = () => {
           <MaskedImage
             src={img}
             alt={`Sudip Mishra ${i}`}
-            variant="shape2"
+            variant="shape5"
             fill
             className="rounded-sm"
           />
