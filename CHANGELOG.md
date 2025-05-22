@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.1.4] - 2025-05-22
+### Added
+- Next.config file update
+
 ## [1.1.3] - 2025-05-20
 ### Added
 - Shape changes in hero section
