@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.1.5] - 2025-06-11
+### Added
+- Masked Image shape changed
+
 ## [1.1.4] - 2025-05-22
 ### Added
 - Next.config file update
