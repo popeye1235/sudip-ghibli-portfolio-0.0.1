@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.1.6] - 2025-06-19
+### Added
+- Resume link updated
+
 ## [1.1.5] - 2025-06-11
 ### Added
 - Masked Image shape changed
