@@ -8,6 +8,16 @@ import { ExternalLink } from 'lucide-react';
 const ExperiencesSection = () => {
   const companies = [
     {
+      name: "Credit Nirvana - A Perfios Company",
+      description: `At Credit Nirvana, I work as a Software Engineer focused on modernizing and enhancing the frontend of our debt collection platform using React.js. I collaborate closely with product, design and backend teams to deliver scalable, user-centric interfaces that improve usability and performance. My work contributes to building smart, data-driven solutions that help financial institutions make faster and more accurate decisions in debt collection management.`,
+      tags: ["SQL", "React", "MUI", "Java", "KeyCloak", "Spring Boot", "JavaScript", "HTML/CSS"],
+      link: "https://www.creditnirvana.ai/",
+      startDate: "Jun 2025",
+      endDate: "Present",
+      position: "Software Engineer",
+      location: "Bengaluru, India"
+    },
+    {
       name: "PhysicsWallah Pvt Ltd",
       description: `Developed and published over 30+ features, resulting in a 58% increase in user engagement. Contributed to the development of a unified Master Admin Panel, integrating frontend functionalities for 40+ orga-
 nizations. Implemented server-side rendering (SSR) in ReactJS, which significantly reduced page load time by 40% and
