@@ -59,7 +59,7 @@ const Footer = () => {
               <Linkedin size={22} />
             </a>
             <a
-              href="https://www.instagram.com/babumosai_23/"
+              href="https://www.instagram.com/babumoshai_023/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"

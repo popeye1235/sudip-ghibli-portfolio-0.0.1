@@ -86,7 +86,7 @@ const ContactSection = () => {
                       <Twitter size={18} />
                     </Button>
                   </a>
-                  <a href="https://www.instagram.com/babumosai_23/" target="_blank" rel="noopener noreferrer">
+                  <a href="https://www.instagram.com/babumoshai_023/" target="_blank" rel="noopener noreferrer">
                 <Button variant="outline" size="icon" className="rounded-full h-10 w-10">
                   <Instagram size={18} />
                 </Button>

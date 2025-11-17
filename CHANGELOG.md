@@ -1,10 +1,13 @@
 # Changelog
 
+## [1.1.8] - 2025-11-17
+### Added
+- Instagram Link Updated
+
 ## [1.1.7] - 2025-08-18
 ### Added
 - Resume link updated
 - Added new company name in experience section
-
 
 ## [1.1.6] - 2025-06-19
 ### Added

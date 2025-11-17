@@ -127,7 +127,7 @@ const HeroSection = () => {
                     <Twitter size={22} />
                   </Button>
                 </a>
-                <a href="https://www.instagram.com/babumosai_23/" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.instagram.com/babumoshai_023/" target="_blank" rel="noopener noreferrer">
                   <Button variant="ghost" size="icon" className="rounded-full h-12 w-12 cursor-pointer">
                     <Instagram size={22} />
                   </Button>
