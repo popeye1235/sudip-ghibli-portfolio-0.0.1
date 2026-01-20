@@ -8,10 +8,6 @@ const nextConfig: NextConfig = {
       pathname: '/**',
     }]
   },
-  optimization: {
-    minimize: true,
-  }
-  
 };
 
 export default nextConfig;
