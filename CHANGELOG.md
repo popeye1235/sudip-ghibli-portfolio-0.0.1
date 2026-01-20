@@ -1,5 +1,10 @@
 # Changelog
 
+## [1.1.9] - 2026-01-20
+### Added
+- Youtube link added
+- Welcome modal added
+
 ## [1.1.8] - 2025-11-17
 ### Added
 - Instagram Link Updated

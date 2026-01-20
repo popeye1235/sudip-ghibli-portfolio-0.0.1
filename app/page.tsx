@@ -10,6 +10,7 @@ import Footer from '@/components/footer';
 import FloatingNav from '@/components/floating-nav';
 import ExperiencesSection from '@/components/experiences-section';
 import ScrollDownIndicator from '@/components/scroll-down-indicator';
+import YoutubeSubscribeModal from '@/components/youtube-subscribe-modal';
 
 
 export default function Home() {
@@ -36,6 +37,7 @@ export default function Home() {
       </div>
       <Footer />
       <ScrollDownIndicator />
+      <YoutubeSubscribeModal />
     </main>
   );
 }

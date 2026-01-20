@@ -41,7 +41,7 @@ const AboutSection = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
             <div className="text-center">
-              <div className="text-4xl font-bold text-primary mb-2">3+</div>
+              <div className="text-4xl font-bold text-primary mb-2">3.5+</div>
               <div className="text-muted-foreground">Years of Experience</div>
             </div>
             <div className="text-center">
