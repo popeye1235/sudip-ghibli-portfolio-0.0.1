@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useMemo } from 'react';
-import { Home, User, Code, Briefcase, Mail, Building2, Menu, X } from 'lucide-react';
+import { Home, User, Code, Briefcase, Mail, Building2, Menu, X, Lightbulb } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const FloatingNav = () => {
@@ -13,6 +13,7 @@ const FloatingNav = () => {
     { id: 'about', icon: User, label: 'About' },
     { id: 'skills', icon: Code, label: 'Skills' },
     { id: 'projects', icon: Briefcase, label: 'Projects' },
+    { id: 'philosophy', icon: Lightbulb, label: 'Philosophy' },
     { id: 'experiences', icon: Building2, label: 'Experiences' },
     { id: 'contact', icon: Mail, label: 'Contact' },
   ], []);

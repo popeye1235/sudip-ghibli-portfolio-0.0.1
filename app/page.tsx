@@ -12,6 +12,7 @@ import ExperiencesSection from '@/components/experiences-section';
 import ScrollDownIndicator from '@/components/scroll-down-indicator';
 import YoutubeSubscribeModal from '@/components/youtube-subscribe-modal';
 import ModeToggle from '@/components/mode-toggle';
+import WhyIBuildInterfacesSection from '@/components/WhyIBuildInterfacesSection';
 
 
 export default function Home() {
@@ -30,6 +31,9 @@ export default function Home() {
       </div>
       <div id="projects">
         <ProjectsSection />
+      </div>
+      <div id="Philosophy">
+        <WhyIBuildInterfacesSection />
       </div>
       <div id="experiences">
         <ExperiencesSection />

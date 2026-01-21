@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.2.1] - 2026-01-21
+### Added
+- New section "Philosophy" added
+
 ## [1.2.0] - 2026-01-21
 ### Added
 - Two new mode added - Technical & Narrative
