@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.2.0] - 2026-01-21
+### Added
+- Two new mode added - Technical & Narrative
+- Refactored all the text for these two mode
+- Kept technical mode const for mobile
+
 ## [1.1.9] - 2026-01-20
 ### Added
 - Youtube link added

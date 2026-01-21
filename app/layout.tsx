@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Nunito } from "next/font/google";
 import { PT_Sans } from "next/font/google";
 import "./globals.css";
+import { ModeProvider } from "./context/mode-context";
+
 
 const nunito = Nunito({
   variable: "--font-nunito",
@@ -29,8 +31,10 @@ export default function RootLayout({
       <body
         className={`${nunito.variable} ${ptSans.variable} antialiased relative`}
       >
+        <ModeProvider>
         <div className="texture" />
         {children}
+        </ModeProvider>
       </body>
     </html>
   );

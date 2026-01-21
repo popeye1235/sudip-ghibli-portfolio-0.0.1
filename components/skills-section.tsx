@@ -3,8 +3,10 @@
 import React from 'react';
 import { Badge } from '@/components/ui/badge';
 import { Separator } from '@/components/ui/separator';
+import { useMode } from '@/app/context/mode-context';
 
 const SkillsSection = () => {
+   const { mode } = useMode();
   const skillCategories = [
     {
       title: "Frontend",
@@ -16,7 +18,7 @@ const SkillsSection = () => {
     },
     {
       title: "Tools & Others",
-      skills: ["Git/GitHub", "Docker", "Jira", "CI/CD", "Testing", "UI/UX Design", "Figma", "React Native", "Jenkins", "Canva", "Postman"]
+      skills: ["Git/GitHub", "Docker", "Jira", "CI/CD", "Testing", "UI/UX Design", "Figma", "React Native", "Jenkins", "Canva", "Postman", "Communication", "Management"]
     }
   ];
 
@@ -27,8 +29,10 @@ const SkillsSection = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <div className="space-y-2 mb-8 text-center">
-            <h2 className="text-xl text-primary font-medium">My Expertise</h2>
-            <h3 className="text-3xl md:text-5xl font-bold">Professional Skills</h3>
+            <h2 className="text-xl text-primary font-medium">{mode === "story" ? "Tools I’ve Learned to Trust 🛠️" : "My Expertise"}
+            </h2>
+            <h3 className="text-3xl md:text-5xl font-bold">{mode === "story" ? "Skills Forged Over Time 🔥" : "Professional Skills"}
+            </h3>
             <Separator className="w-24 h-1 bg-primary rounded-full mx-auto mt-4" />
           </div>
 

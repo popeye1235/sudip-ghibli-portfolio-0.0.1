@@ -11,12 +11,14 @@ import FloatingNav from '@/components/floating-nav';
 import ExperiencesSection from '@/components/experiences-section';
 import ScrollDownIndicator from '@/components/scroll-down-indicator';
 import YoutubeSubscribeModal from '@/components/youtube-subscribe-modal';
+import ModeToggle from '@/components/mode-toggle';
 
 
 export default function Home() {
   return (
     <main className="min-h-screen">
-       <FloatingNav /> 
+      <ModeToggle />
+      <FloatingNav />
       <div id="home">
         <HeroSection />
       </div>
