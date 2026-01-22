@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.2.2] - 2026-01-21
+### Added
+- Why this design, added in philosophy section
+
 ## [1.2.1] - 2026-01-21
 ### Added
 - New section "Philosophy" added

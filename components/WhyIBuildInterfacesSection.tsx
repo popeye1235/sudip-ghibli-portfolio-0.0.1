@@ -1,6 +1,10 @@
 "use client";
 
 import React from "react";
+import { useState } from "react";
+import ExplainInterfaceButton from "./explain-interface-button";
+import ExplainInterfaceModal from "./explain-interface-modal";
+
 import { Separator } from "@/components/ui/separator";
 import { useMode } from "@/app/context/mode-context";
 
@@ -68,7 +72,9 @@ const PRINCIPLES = [
 ];
 
 const WhyIBuildInterfacesSection = () => {
-  const { mode } = useMode();
+  const { mode, isDesktop } = useMode();
+  const [explainOpen, setExplainOpen] = useState(false);
+
   const isStory = mode === "story";
 
   return (
@@ -88,6 +94,11 @@ const WhyIBuildInterfacesSection = () => {
           </h3>
           <Separator className="w-24 h-1 bg-primary rounded-full mx-auto mt-4" />
         </div>
+        {!isStory && isDesktop && (
+  <div className="flex justify-center mb-10">
+    <ExplainInterfaceButton onClick={() => setExplainOpen(true)} />
+  </div>
+)}
 
         <div className="flex flex-col items-center gap-8">
           {PRINCIPLES.map((item, index) => {
@@ -119,6 +130,11 @@ const WhyIBuildInterfacesSection = () => {
           })}
         </div>
       </div>
+      <ExplainInterfaceModal
+  open={explainOpen}
+  onClose={() => setExplainOpen(false)}
+/>
+
     </section>
   );
 };
