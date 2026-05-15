@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.2.3] - 2026-05-15
+### Added
+- Resume updated
+
 ## [1.2.2] - 2026-01-21
 ### Added
 - Why this design, added in philosophy section

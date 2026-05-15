@@ -338,7 +338,7 @@ const HeroSection = () => {
               <Button className="gap-2 px-6 py-6 rounded-full">
                 <ArrowLeft size={18} />
                 <a
-                  href="https://drive.google.com/file/d/1sEXnyQiHNuWy7m-6vBllSoWePs1QxAtQ/view"
+                  href="https://drive.google.com/file/d/1mQSlNMdaQoiim7OAN8XpwIWfPoNIXYdR/view?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -375,7 +375,7 @@ const HeroSection = () => {
               <Button className="gap-2 px-6 py-6 rounded-full">
                 <ArrowLeft size={18} />
                 <a
-                  href="https://drive.google.com/file/d/1sEXnyQiHNuWy7m-6vBllSoWePs1QxAtQ/view"
+                  href="https://drive.google.com/file/d/1mQSlNMdaQoiim7OAN8XpwIWfPoNIXYdR/view?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
