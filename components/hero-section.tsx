@@ -214,7 +214,7 @@ const DESKTOP_COPY = {
     name: "Mishra Sudip",
     description: (
       <>
-        Frontend engineer with 3.5+ years of experience building scalable,
+        Frontend engineer with 4+ years of experience building scalable,
         production-grade web applications ⚙️ using React, Next.js, and Angular.
         <br />
         Strong focus on performance optimization, SSR, design systems, and
@@ -375,7 +375,7 @@ const HeroSection = () => {
               <Button className="gap-2 px-6 py-6 rounded-full">
                 <ArrowLeft size={18} />
                 <a
-                  href="https://drive.google.com/file/d/1mQSlNMdaQoiim7OAN8XpwIWfPoNIXYdR/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1mXUtelxX3DshrjdugtAoXhJriZrhvXH9/view?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

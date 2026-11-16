@@ -14,7 +14,7 @@ const aboutCopy = {
   },
   developer: {
     paragraphs: [
-      "I’m a frontend engineer with 3.5+ years of experience building production-scale applications using React, Next.js, Angular, and modern UI libraries.",
+      "I’m a frontend engineer with 4+ years of experience building production-scale applications using React, Next.js, Angular, and modern UI libraries.",
       "I focus on clean component architecture, predictable state management, performance optimization, and accessibility. I’ve worked closely with design, backend, QA, product and operations teams in high-traffic environments.",
       "My goal is to build systems that scale — technically and cognitively — so teams can move fast without breaking trust."
     ],
@@ -147,15 +147,15 @@ const AboutSection = () => {
           {/* Stats */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
             <div className="text-center">
-              <div className="text-4xl font-bold text-primary mb-2">3.5+</div>
+              <div className="text-4xl font-bold text-primary mb-2">4+</div>
               <div className="text-muted-foreground">Years of Experience</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-primary mb-2">20+</div>
+              <div className="text-4xl font-bold text-primary mb-2">30+</div>
               <div className="text-muted-foreground">Projects Completed</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-primary mb-2">10+</div>
+              <div className="text-4xl font-bold text-primary mb-2">20+</div>
               <div className="text-muted-foreground">Happy Clients</div>
             </div>
           </div>

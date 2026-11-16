@@ -47,7 +47,7 @@ export default function YoutubeSubscribeModal() {
 
         <div className="flex justify-center gap-4">
           <a
-            href="https://www.youtube.com/@babumoshai_23?sub_confirmation=1"
+            href="https://www.youtube.com/@mishra.sudip.23?sub_confirmation=1"
             target="_blank"
             rel="noopener noreferrer"
             className="rounded-full bg-[#7a8f3a] px-6 py-2 text-sm text-white transition hover:scale-[1.03]"
