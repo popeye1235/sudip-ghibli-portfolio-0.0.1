@@ -3,6 +3,7 @@ import { Nunito } from "next/font/google";
 import { PT_Sans } from "next/font/google";
 import "./globals.css";
 import { ModeProvider } from "./context/mode-context";
+import { LensProvider } from "./context/lens-context";
 
 
 const nunito = Nunito({
@@ -32,8 +33,10 @@ export default function RootLayout({
         className={`${nunito.variable} ${ptSans.variable} antialiased relative`}
       >
         <ModeProvider>
+        <LensProvider>
         <div className="texture" />
         {children}
+        </LensProvider>
         </ModeProvider>
       </body>
     </html>

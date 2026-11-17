@@ -187,6 +187,8 @@ import { Button } from "@/components/ui/button";
 import { ExternalLink, Github } from "lucide-react";
 import { motion } from "framer-motion";
 import { useMode } from "@/app/context/mode-context";
+import { useLens, type Lens } from "@/app/context/lens-context";
+import LensPicker from "@/components/lens-picker";
 
 type Project = {
   title: string;
@@ -210,6 +212,39 @@ const TAG_FILTERS: Record<string, string[]> = {
   "Metadata-driven UI": ["Metadata-driven UI"],
 };
 
+// Order of project titles per visitor lens; anything unlisted keeps its normal order after these.
+const LENS_ORDER: Record<Lens, string[]> = {
+  recruiter: [
+    "SSFL Collections Platform - CN",
+    "AskCN - AI Data Assistant - CN",
+    "PW Lecture Decoder (GenAI)",
+    "Metadata-Driven UI Engine - CN",
+    "PW Admin",
+    "E-Commerce Platform of PW",
+    "Voice Call Analysis - CN",
+    "PW Spam Check (GenAI)",
+  ],
+  engineer: [
+    "Metadata-Driven UI Engine - CN",
+    "Reusable Utility Components - CN",
+    "Frontend Performance & Optimisation - CN",
+    "Themeable Design System - CN",
+    "PII Masking (Shoulder-Surfing Protection) - CN",
+    "AskCN - AI Data Assistant - CN",
+    "SSFL Collections Platform - CN",
+    "PW Admin",
+  ],
+  founder: [
+    "5-Min PG Delivery App",
+    "AskCN - AI Data Assistant - CN",
+    "PW Lecture Decoder (GenAI)",
+    "PW Spam Check (GenAI)",
+    "Voice Call Analysis - CN",
+    "SSFL Collections Platform - CN",
+    "Portfolio Ghibli Style",
+  ],
+};
+
 const chipClass = (active: boolean, small = false) =>
   `rounded-full border transition-colors duration-300 cursor-pointer ${
     small ? "px-3 py-1 text-xs" : "px-4 py-1.5 text-sm"
@@ -221,6 +256,7 @@ const chipClass = (active: boolean, small = false) =>
 
 const ProjectsSection = () => {
   const { mode } = useMode();
+  const { lens } = useLens();
   const [popupIndex, setPopupIndex] = useState<number | null>(null);
   const [group, setGroup] = useState<(typeof GROUPS)[number]>("All");
   const [tagFilter, setTagFilter] = useState<string | null>(null);
@@ -496,12 +532,21 @@ const ProjectsSection = () => {
         if (aliases && !project.tags.some((t) => aliases.includes(t))) return false;
         return true;
       })
-      // in the "All" view, featured work floats to the top (stable sort)
-      .sort((a, b) =>
-        group === "All" ? Number(!!b.project.featured) - Number(!!a.project.featured) : 0
-      );
+      // "All" view: the visitor's lens decides the order, else featured work floats up (stable sort)
+      .sort((a, b) => {
+        if (group !== "All") return 0;
+        if (lens) {
+          const order = LENS_ORDER[lens];
+          const rank = (t: string) => {
+            const i = order.indexOf(t);
+            return i === -1 ? order.length : i;
+          };
+          return rank(a.project.title) - rank(b.project.title);
+        }
+        return Number(!!b.project.featured) - Number(!!a.project.featured);
+      });
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [group, tagFilter]);
+  }, [group, tagFilter, lens]);
 
   return (
     <section
@@ -519,6 +564,7 @@ const ProjectsSection = () => {
         </div>
 
         <div className="max-w-4xl mx-auto mb-10 space-y-3 flex flex-col items-center">
+          <LensPicker className="mb-2" />
           <div className="flex flex-wrap justify-center gap-2" role="group" aria-label="Filter projects by group">
             {GROUPS.map((g) => (
               <button

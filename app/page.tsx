@@ -13,6 +13,7 @@ import ScrollDownIndicator from '@/components/scroll-down-indicator';
 import YoutubeSubscribeModal from '@/components/youtube-subscribe-modal';
 import ModeToggle from '@/components/mode-toggle';
 import CommandPalette from '@/components/command-palette';
+import LensPicker from '@/components/lens-picker';
 import WhyIBuildInterfacesSection from '@/components/WhyIBuildInterfacesSection';
 
 
@@ -21,6 +22,7 @@ export default function Home() {
     <main className="min-h-screen">
       <ModeToggle />
       <CommandPalette />
+      <LensPicker compact className="fixed top-4 left-4 z-40" />
       <FloatingNav />
       <div id="home">
         <HeroSection />

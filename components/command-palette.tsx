@@ -4,6 +4,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Command, CornerDownLeft, Search, Sparkles } from "lucide-react";
 import { useMode } from "@/app/context/mode-context";
+import { LENSES, useLens } from "@/app/context/lens-context";
 import { askKnowledge } from "@/app/data/knowledge";
 
 type Item = {
@@ -32,6 +33,7 @@ const SUGGESTIONS = [
 
 export default function CommandPalette() {
   const { mode, toggleMode, isDesktop } = useMode();
+  const { lens, setLens } = useLens();
   const [open, setOpen] = useState(false);
   const [query, setQuery] = useState("");
   const [active, setActive] = useState(0);
@@ -93,6 +95,16 @@ export default function CommandPalette() {
             },
           ]
         : []),
+      ...LENSES.map((l) => ({
+        id: `lens-${l.id}`,
+        label: lens === l.id ? `Stop viewing as ${l.label}` : `View as ${l.label}`,
+        hint: l.blurb,
+        group: "Actions",
+        run: () => {
+          setLens(lens === l.id ? null : l.id);
+          go("projects");
+        },
+      })),
       {
         id: "github",
         label: "Open GitHub",
@@ -114,8 +126,9 @@ export default function CommandPalette() {
       group: "Ask Sudip",
       run: () => go(k.section),
     }));
-    return [...answers, ...matched];
-  }, [query, mode, isDesktop, toggleMode, close, go]);
+    // commands you typed the name of come first; Ask answers follow
+    return [...matched, ...answers];
+  }, [query, mode, isDesktop, toggleMode, close, go, lens, setLens]);
 
   useEffect(() => setActive(0), [query]);
 
