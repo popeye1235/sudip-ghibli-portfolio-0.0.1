@@ -12,6 +12,7 @@ import ExperiencesSection from '@/components/experiences-section';
 import ScrollDownIndicator from '@/components/scroll-down-indicator';
 import YoutubeSubscribeModal from '@/components/youtube-subscribe-modal';
 import ModeToggle from '@/components/mode-toggle';
+import CommandPalette from '@/components/command-palette';
 import WhyIBuildInterfacesSection from '@/components/WhyIBuildInterfacesSection';
 
 
@@ -19,6 +20,7 @@ export default function Home() {
   return (
     <main className="min-h-screen">
       <ModeToggle />
+      <CommandPalette />
       <FloatingNav />
       <div id="home">
         <HeroSection />

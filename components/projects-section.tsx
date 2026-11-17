@@ -214,6 +214,96 @@ const ProjectsSection = () => {
       githubLink: "",
     },    
     {
+      title: "SSFL Collections Platform - CN",
+      story:
+        "A field-to-office chain of trust — every rupee collected, approved and noticed along the way leaves a clear, auditable trail.",
+      developer:
+        "Led frontend delivery of Credit Nirvana's SSFL collections platform across multiple drops: OTS and pre-closure posting, payment links with QR generation, collection posting and BM authentication (approve/reject), customer receipts, legal notice management with a notice-sign maker-checker flow, FOS activity monitoring map, and an SSFL-only collapsible navbar. Metadata-driven screens in React and MUI, on a Vite build.",
+      tags: ["React", "MUI", "Vite", "Metadata-driven UI", "Maker-Checker", "Redux"],
+      liveLink: "",
+      githubLink: "",
+    },
+    {
+      title: "Voice Call Recordings & Summaries - CN",
+      story:
+        "Conversations don't have to vanish after the call — they become something a team can revisit, understand and learn from.",
+      developer:
+        "Built frontend for call-recording playback and recording summaries surfaced inside the voice-bot flow at Credit Nirvana, including a second phase of voice-recording enhancements.",
+      tags: ["React", "MUI", "Voice Bot", "Call Recordings"],
+      liveLink: "",
+      githubLink: "",
+    },
+    {
+      title: "Payment Reversal & Refund - CN",
+      story:
+        "Mistakes in money should be easy to undo and hard to get wrong — a flow that stays calm when the stakes are high.",
+      developer:
+        "Built payment reversal and refund workflows (including a second refund phase) with validation, pagination and loading states, plus OTP-verification UI changes for financial operations.",
+      tags: ["React", "MUI", "Payments", "Validation"],
+      liveLink: "",
+      githubLink: "",
+    },
+    {
+      title: "Priority Assignment & Monitoring - CN",
+      story:
+        "Helping a team decide what deserves attention first, so effort goes where it matters most.",
+      developer:
+        "Built priority assignment and priority monitoring interfaces for collections teams at Credit Nirvana, alongside FOS live-monitoring map fixes.",
+      tags: ["React", "MUI", "Maps", "Monitoring"],
+      liveLink: "",
+      githubLink: "",
+    },
+    {
+      title: "PII Masking (Shoulder-Surfing Protection) - CN",
+      story:
+        "Sensitive details stay hidden until someone chooses to look — and quietly hide themselves again.",
+      developer:
+        "Implemented a metadata-driven masking convention across shared input components: eye-toggle reveal with 30-second auto re-mask, wired into many forms across the platform.",
+      tags: ["React", "MUI", "Security", "Shared Components"],
+      liveLink: "",
+      githubLink: "",
+    },
+    {
+      title: "Themeable Design System - CN",
+      story:
+        "One product, many faces — a quiet system of tokens that lets each client feel at home without rebuilding anything.",
+      developer:
+        "Turned Figma tokens into per-client MUI themes selected at build time, and removed inline colours across the app while keeping the default theme visually identical.",
+      tags: ["React", "MUI", "Figma Tokens", "Theming", "Vite"],
+      liveLink: "",
+      githubLink: "",
+    },
+    {
+      title: "Metadata-Driven UI Engine - CN",
+      story:
+        "Screens that can be reshaped without touching code — change the description, and the interface changes with it.",
+      developer:
+        "Worked on Credit Nirvana's metadata-driven frontend, where screens, filters, tables, forms and routes are rendered from layout JSON stored in the database. Built many features this way, so clients can be customised by editing JSON in the DB, with no code change or redeploy.",
+      tags: ["React", "MUI", "JSON Layouts", "Config-driven UI", "Redux"],
+      liveLink: "",
+      githubLink: "",
+    },
+    {
+      title: "Reusable Utility Components - CN",
+      story:
+        "Small, sturdy tools made once and trusted everywhere, so every new screen starts further along.",
+      developer:
+        "Built and extended shared, utility-style components (grids, image viewers, multi-select lists, details modals, PDF document generation) with metadata-gated opt-in props, so new behaviour reaches many screens without breaking existing ones.",
+      tags: ["React", "MUI", "Shared Components", "PDF", "Reusability"],
+      liveLink: "",
+      githubLink: "",
+    },
+    {
+      title: "Frontend Performance & Optimisation - CN",
+      story:
+        "Making the product feel lighter — less waiting, less noise, more calm for people working under pressure.",
+      developer:
+        "Improved performance through lazy-loaded modals, filter-handling optimisation, and a migration of the build to Vite, and kept it reliable with case-sensitive build checks and consistent null-state handling.",
+      tags: ["React", "Vite", "Lazy Loading", "Performance"],
+      liveLink: "",
+      githubLink: "",
+    },
+    {
       title: "E-Commerce Platform of PW",
       story:
         "A marketplace built for scale — where learning materials move quietly but reliably from creators to students.",
