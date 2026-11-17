@@ -85,6 +85,26 @@ const Footer = () => {
               <span className="text-primary">Sudip </span>Mishra
             </p>
             <p className="text-sm text-muted-foreground">
+              Also known as Babumoshai ·{" "}
+              <a
+                href="https://www.instagram.com/babumoshai_023/"
+                target="_blank"
+                rel="noopener noreferrer me"
+                className="hover:text-primary transition-colors"
+              >
+                Instagram @babumoshai_023
+              </a>{" "}
+              ·{" "}
+              <a
+                href="https://www.youtube.com/@mishra.sudip.23"
+                target="_blank"
+                rel="noopener noreferrer me"
+                className="hover:text-primary transition-colors"
+              >
+                YouTube @mishra.sudip.23
+              </a>
+            </p>
+            <p className="text-sm text-muted-foreground">
               {new Date().getFullYear()} All rights reserved.
             </p>
             {version && (
