@@ -246,7 +246,8 @@ const MOBILE_COPY = {
 const FlipImage = () => {
   const images = [
     "https://res.cloudinary.com/dwbwiwduw/image/upload/v1744278926/ghibli-dam_dus3zq.png",
-    "https://res.cloudinary.com/dwbwiwduw/image/upload/v1747289556/IMG_8294_lsvxag.jpg",
+    // "https://res.cloudinary.com/dwbwiwduw/image/upload/v1747289556/IMG_8294_lsvxag.jpg",
+    "https://res.cloudinary.com/dwbwiwduw/image/upload/v1794905479/cpm35_2026-10-21_191958A3CB6CD50B0F_vakykp.jpg"
     // "https://res.cloudinary.com/dwbwiwduw/image/upload/v1768996347/popeye_sij9wt.jpg"
   ];
 

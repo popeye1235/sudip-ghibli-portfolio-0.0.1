@@ -31,7 +31,7 @@
 //       title: "PW Spam check",
 //       description:
 //         "Contributed to GenAI project with DS team of PW built with NextJS, which simplifies the effort of DPP Analyst team to check more than 3k genuine answersheet monthly without hesitation.",
-//       tags: ["NextJS", "Tailwind CSS", "Axios"],
+//       tags: ["NextJS", "Tailwind CSS", "Axios", "GenAI"],
 //       liveLink: "",
 //       githubLink: "",
 //     },
@@ -180,7 +180,7 @@
 
 "use client";
 
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
@@ -188,13 +188,47 @@ import { ExternalLink, Github } from "lucide-react";
 import { motion } from "framer-motion";
 import { useMode } from "@/app/context/mode-context";
 
+type Project = {
+  title: string;
+  company: "Credit Nirvana" | "PhysicsWallah" | "BYJU'S" | "Personal";
+  featured?: boolean;
+  story: string;
+  developer: string;
+  tags: string[];
+  liveLink: string;
+  githubLink: string;
+};
+
+const GROUPS = ["All", "Featured", "Credit Nirvana", "PhysicsWallah", "BYJU'S", "Personal"] as const;
+
+// filter label -> tag names (as written on the cards) that satisfy it
+const TAG_FILTERS: Record<string, string[]> = {
+  React: ["React"],
+  "Next.js": ["NextJS"],
+  Angular: ["Angular", "Angular 12", "Angular 19"],
+  GenAI: ["GenAI"],
+  "Metadata-driven UI": ["Metadata-driven UI"],
+};
+
+const chipClass = (active: boolean, small = false) =>
+  `rounded-full border transition-colors duration-300 cursor-pointer ${
+    small ? "px-3 py-1 text-xs" : "px-4 py-1.5 text-sm"
+  } ${
+    active
+      ? "bg-primary text-primary-foreground border-primary"
+      : "bg-background/80 text-muted-foreground border-border hover:text-primary hover:border-primary/50"
+  }`;
+
 const ProjectsSection = () => {
   const { mode } = useMode();
   const [popupIndex, setPopupIndex] = useState<number | null>(null);
+  const [group, setGroup] = useState<(typeof GROUPS)[number]>("All");
+  const [tagFilter, setTagFilter] = useState<string | null>(null);
 
-  const projects = [
+  const projects: Project[] = [
     {
       title: "Anti–Money Laundering (AML) Module - CN",
+      company: "Credit Nirvana",
       story:
         "A system built to notice patterns humans might miss — guarding trust where money, risk, and responsibility intersect.",
       developer:
@@ -205,6 +239,7 @@ const ProjectsSection = () => {
     },
     {
       title: "Online Dispute Resolution (ODR) Module - CN",
+      company: "Credit Nirvana",
       story:
         "A quieter alternative to conflict — designed to resolve disputes with clarity instead of confrontation.",
       developer:
@@ -215,6 +250,8 @@ const ProjectsSection = () => {
     },    
     {
       title: "SSFL Collections Platform - CN",
+      company: "Credit Nirvana",
+      featured: true,
       story:
         "A field-to-office chain of trust — every rupee collected, approved and noticed along the way leaves a clear, auditable trail.",
       developer:
@@ -224,17 +261,31 @@ const ProjectsSection = () => {
       githubLink: "",
     },
     {
-      title: "Voice Call Recordings & Summaries - CN",
+      title: "Voice Call Analysis - CN",
+      company: "Credit Nirvana",
       story:
-        "Conversations don't have to vanish after the call — they become something a team can revisit, understand and learn from.",
+        "A field agent's voice, in any language, becomes something every supervisor can understand — no typing at the end of a long day.",
       developer:
-        "Built frontend for call-recording playback and recording summaries surfaced inside the voice-bot flow at Credit Nirvana, including a second phase of voice-recording enhancements.",
-      tags: ["React", "MUI", "Voice Bot", "Call Recordings"],
+        "AI-powered voice feedback for collection agents. After a field visit, agents record feedback (promise-to-pay date, issues, everything) in any regional language instead of typing it. AI summarises it, converts it to English or Hindi audio so supervisors can audit it even when they don't speak the agent's language, and the same data helps train the outbound voice bot and audit signals like recovery percentage and promised dates. Delivered across two phases.",
+      tags: ["React", "MUI", "GenAI", "Voice Recording", "Multilingual", "Voice Bot"],
+      liveLink: "",
+      githubLink: "",
+    },
+    {
+      title: "AskCN - AI Data Assistant - CN",
+      company: "Credit Nirvana",
+      featured: true,
+      story:
+        "Asking for data should feel like asking a colleague — say what you need in plain words, and watch the answer appear, with every step open to check.",
+      developer:
+        "AI-powered self-serve data section for banks, NBFCs and ARCs. Instead of waiting for a hand-written DB query to run in their own production DB and export as CSV, users type or speak what data they need in plain English; it is converted to a DB query and run in the background. Results come back with the generated script and execution performance so they can be re-verified, and can be downloaded as CSV or Excel.",
+      tags: ["React", "MUI", "GenAI", "Natural Language to SQL", "Voice Input", "CSV/Excel Export"],
       liveLink: "",
       githubLink: "",
     },
     {
       title: "Payment Reversal & Refund - CN",
+      company: "Credit Nirvana",
       story:
         "Mistakes in money should be easy to undo and hard to get wrong — a flow that stays calm when the stakes are high.",
       developer:
@@ -245,6 +296,7 @@ const ProjectsSection = () => {
     },
     {
       title: "Priority Assignment & Monitoring - CN",
+      company: "Credit Nirvana",
       story:
         "Helping a team decide what deserves attention first, so effort goes where it matters most.",
       developer:
@@ -255,6 +307,7 @@ const ProjectsSection = () => {
     },
     {
       title: "PII Masking (Shoulder-Surfing Protection) - CN",
+      company: "Credit Nirvana",
       story:
         "Sensitive details stay hidden until someone chooses to look — and quietly hide themselves again.",
       developer:
@@ -265,6 +318,7 @@ const ProjectsSection = () => {
     },
     {
       title: "Themeable Design System - CN",
+      company: "Credit Nirvana",
       story:
         "One product, many faces — a quiet system of tokens that lets each client feel at home without rebuilding anything.",
       developer:
@@ -275,16 +329,19 @@ const ProjectsSection = () => {
     },
     {
       title: "Metadata-Driven UI Engine - CN",
+      company: "Credit Nirvana",
+      featured: true,
       story:
         "Screens that can be reshaped without touching code — change the description, and the interface changes with it.",
       developer:
         "Worked on Credit Nirvana's metadata-driven frontend, where screens, filters, tables, forms and routes are rendered from layout JSON stored in the database. Built many features this way, so clients can be customised by editing JSON in the DB, with no code change or redeploy.",
-      tags: ["React", "MUI", "JSON Layouts", "Config-driven UI", "Redux"],
+      tags: ["React", "MUI", "JSON Layouts", "Metadata-driven UI", "Redux"],
       liveLink: "",
       githubLink: "",
     },
     {
       title: "Reusable Utility Components - CN",
+      company: "Credit Nirvana",
       story:
         "Small, sturdy tools made once and trusted everywhere, so every new screen starts further along.",
       developer:
@@ -295,6 +352,7 @@ const ProjectsSection = () => {
     },
     {
       title: "Frontend Performance & Optimisation - CN",
+      company: "Credit Nirvana",
       story:
         "Making the product feel lighter — less waiting, less noise, more calm for people working under pressure.",
       developer:
@@ -305,6 +363,7 @@ const ProjectsSection = () => {
     },
     {
       title: "E-Commerce Platform of PW",
+      company: "PhysicsWallah",
       story:
         "A marketplace built for scale — where learning materials move quietly but reliably from creators to students.",
       developer:
@@ -315,6 +374,7 @@ const ProjectsSection = () => {
     },
     {
       title: "PW Admin",
+      company: "PhysicsWallah",
       story:
         "A silent control room — where thousands of daily decisions depend on clarity, speed, and trust.",
       developer:
@@ -324,17 +384,32 @@ const ProjectsSection = () => {
       githubLink: "",
     },
     {
+      title: "PW Lecture Decoder (GenAI)",
+      company: "PhysicsWallah",
+      featured: true,
+      story:
+        "A lecture becomes a study guide — students pick a class, carry on with their day, and come back to notes made just for them.",
+      developer:
+        "GenAI feature that decodes a whole lecture, analyses every question and solution discussed, and generates a study document. Generation is asynchronous: students select a lecture, and when it finishes they get a pop-up offering the download, or the file is saved to their downloads folder.",
+      tags: ["NextJS", "Tailwind CSS", "GenAI", "Async Jobs", "Document Generation"],
+      liveLink: "",
+      githubLink: "",
+    },
+    {
       title: "PW Spam Check (GenAI)",
+      company: "PhysicsWallah",
+      featured: true,
       story:
         "An invisible assistant — reducing human fatigue by filtering noise from genuine effort.",
       developer:
         "Worked on a GenAI-powered answer sheet verification tool using Next.js and Axios for large-scale data processing.",
-      tags: ["NextJS", "Tailwind CSS", "Axios"],
+      tags: ["NextJS", "Tailwind CSS", "Axios", "GenAI"],
       liveLink: "",
       githubLink: "",
     },
     {
       title: "Landing Page (PW)",
+      company: "PhysicsWallah",
       story:
         "The front door to learning — where first impressions quietly decide trust.",
       developer:
@@ -345,6 +420,7 @@ const ProjectsSection = () => {
     },
     {
       title: "PW Test Series Platform",
+      company: "PhysicsWallah",
       story:
         "A system built to measure growth, not just scores.",
       developer:
@@ -354,7 +430,30 @@ const ProjectsSection = () => {
       githubLink: "",
     },
     {
+      title: "Dashboard - BYJU'S",
+      company: "BYJU'S",
+      story:
+        "A first home for numbers and progress — organised so people see what matters the moment they arrive.",
+      developer:
+        "Built the dashboard page at BYJU'S as an Associate Software Engineer, using React, Redux and Bootstrap.",
+      tags: ["React", "Redux", "Bootstrap"],
+      liveLink: "",
+      githubLink: "",
+    },
+    {
+      title: "Rating & Testimonial Modules - BYJU'S",
+      company: "BYJU'S",
+      story:
+        "Giving learners a simple way to say how it felt, and giving that voice a place to be seen.",
+      developer:
+        "Built the rating and testimonial modules at BYJU'S using React, Redux and Bootstrap.",
+      tags: ["React", "Redux", "Bootstrap"],
+      liveLink: "",
+      githubLink: "",
+    },
+    {
       title: "User Dashboard",
+      company: "Personal",
       story:
         "An experiment in balance — how much information is helpful before it becomes noise.",
       developer:
@@ -364,16 +463,45 @@ const ProjectsSection = () => {
       githubLink: "https://github.com/popeye1235/user-dashboard-demo",
     },
     {
+      title: "5-Min PG Delivery App",
+      company: "Personal",
+      story:
+        "Hungry at midnight in a PG? Order in a few taps and the message lands straight where we already are — WhatsApp.",
+      developer:
+        "Quick-delivery app for PG residents, built with React and Firebase. Orders are taken through WhatsApp. placing an order sends the room number, building and full order details to our WhatsApp, along with the payment confirmation.",
+      tags: ["React", "Firebase", "WhatsApp"],
+      liveLink: "",
+      githubLink: "",
+    },
+    {
       title: "Portfolio Ghibli Style",
+      company: "Personal",
       story:
         "A quiet portfolio — designed to feel lived in, not marketed.",
       developer:
         "Built a narrative-driven portfolio using Next.js, Tailwind CSS, Shadcn UI, and Framer Motion.",
-      tags: ["NextJS", "Tailwind CSS", "Framer Motion"],
+      tags: ["NextJS", "Tailwind CSS", "Framer Motion", "Shadcn UI"],
       liveLink: "https://sudip-ghibli-portfolio.vercel.app/",
       githubLink: "https://github.com/popeye1235/sudip-ghibli-portfolio-0.0.1",
     },
   ];
+
+  const visible = useMemo(() => {
+    const aliases = tagFilter ? TAG_FILTERS[tagFilter] : null;
+    return projects
+      .map((project, index) => ({ project, index }))
+      .filter(({ project }) => {
+        if (group === "Featured" && !project.featured) return false;
+        if (group !== "All" && group !== "Featured" && project.company !== group) return false;
+        if (aliases && !project.tags.some((t) => aliases.includes(t))) return false;
+        return true;
+      })
+      // in the "All" view, featured work floats to the top (stable sort)
+      .sort((a, b) =>
+        group === "All" ? Number(!!b.project.featured) - Number(!!a.project.featured) : 0
+      );
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [group, tagFilter]);
 
   return (
     <section
@@ -390,8 +518,55 @@ const ProjectsSection = () => {
           <Separator className="w-24 h-1 bg-primary rounded-full mx-auto mt-4" />
         </div>
 
+        <div className="max-w-4xl mx-auto mb-10 space-y-3 flex flex-col items-center">
+          <div className="flex flex-wrap justify-center gap-2" role="group" aria-label="Filter projects by group">
+            {GROUPS.map((g) => (
+              <button
+                key={g}
+                aria-pressed={group === g}
+                onClick={() => setGroup(g)}
+                className={chipClass(group === g)}
+              >
+                {g === "Featured" ? "⭐ Featured" : g}
+              </button>
+            ))}
+          </div>
+          <div className="flex flex-wrap justify-center gap-2" role="group" aria-label="Filter projects by technology">
+            {Object.keys(TAG_FILTERS).map((t) => (
+              <button
+                key={t}
+                aria-pressed={tagFilter === t}
+                onClick={() => setTagFilter(tagFilter === t ? null : t)}
+                className={chipClass(tagFilter === t, true)}
+              >
+                {t}
+              </button>
+            ))}
+          </div>
+          <p className="text-xs text-muted-foreground" aria-live="polite">
+            Showing {visible.length} of {projects.length} projects
+            {(group !== "All" || tagFilter) && (
+              <button
+                onClick={() => {
+                  setGroup("All");
+                  setTagFilter(null);
+                }}
+                className="ml-2 underline hover:text-primary cursor-pointer"
+              >
+                Clear
+              </button>
+            )}
+          </p>
+        </div>
+
+        {visible.length === 0 && (
+          <p className="text-center text-muted-foreground py-10">
+            No projects match this combination. Try clearing a filter.
+          </p>
+        )}
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
+          {visible.map(({ project, index }) => (
             <div
               key={index}
               className="group relative p-6 rounded-xl overflow-hidden bg-gradient-to-br from-muted/30 to-background border border-border/50 hover:border-primary/50 transition-all duration-300 flex flex-col justify-between"
@@ -404,6 +579,11 @@ const ProjectsSection = () => {
               <div className="absolute bottom-0 left-0 w-16 h-16 bg-primary/5 rounded-full -ml-8 -mb-8 group-hover:bg-primary/10 transition-colors duration-500"></div>
 
               <div className="relative space-y-4">
+                {project.featured && (
+                  <span className="inline-block rounded-full bg-primary/15 px-2.5 py-0.5 text-xs font-medium text-primary">
+                    ⭐ Featured
+                  </span>
+                )}
                 <h4 className="text-xl font-bold group-hover:text-primary transition-colors duration-300">
                   {project.title}
                 </h4>

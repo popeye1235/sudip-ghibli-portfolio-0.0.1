@@ -86,10 +86,28 @@ export const KNOWLEDGE: KnowledgeEntry[] = [
   {
     id: "proj-voice",
     kind: "project",
-    title: "Voice Call Recordings & Summaries",
+    title: "Voice Call Analysis (GenAI)",
     answer:
-      "Call-recording playback and recording summaries inside the voice-bot flow, including a second phase of enhancements. React, MUI.",
-    keywords: ["voice", "call", "recording", "recordings", "summary", "summaries", "voice bot", "bot", "audio", "ai", "analysis", "project"],
+      "Collection agents used to type their field feedback (promised payment date, issues, outcome). Now they record it by voice in any regional language and upload it. AI summarises it and converts it to English or Hindi audio so supervisors can audit it, and the data helps train the outbound voice bot and audit recovery percentage and promised dates. Delivered in two phases.",
+    keywords: ["voice", "call", "calls", "recording", "recordings", "summary", "summaries", "voice bot", "outbound", "bot", "audio", "analysis", "regional", "language", "languages", "multilingual", "hindi", "translation", "field", "agent", "agents", "feedback", "audit", "supervisor", "genai", "project"],
+    section: "projects",
+  },
+  {
+    id: "proj-askcn",
+    kind: "project",
+    title: "AskCN: AI data assistant (GenAI)",
+    answer:
+      "Banks, NBFCs and ARCs used to wait for hand-written DB queries they ran in their prod DB and exported as CSV. AskCN lets them type or speak what data they need in plain English; it is converted to a query and run in the background. Results show the generated script and performance for re-verification, and download as CSV or Excel.",
+    keywords: ["askcn", "ask cn", "text to sql", "natural language", "nl2sql", "query", "queries", "sql", "voice input", "data", "csv", "excel", "export", "reports", "reporting", "self serve", "genai", "bank", "nbfc", "arc", "project"],
+    section: "projects",
+  },
+  {
+    id: "proj-lecture",
+    kind: "project",
+    title: "PW Lecture Decoder (GenAI)",
+    answer:
+      "Decodes a whole lecture, analyses every question and solution, and generates a study document. It runs asynchronously: students pick a lecture, then get a pop-up with a download when it finishes, or the file is saved to their downloads folder.",
+    keywords: ["lecture", "lectures", "decoder", "notes", "study", "student", "students", "document", "doc", "async", "asynchronous", "questions", "solutions", "genai", "education", "physicswallah", "pw", "project"],
     section: "projects",
   },
   {
@@ -156,6 +174,31 @@ export const KNOWLEDGE: KnowledgeEntry[] = [
     section: "projects",
   },
   {
+    id: "proj-byjus-dashboard",
+    kind: "project",
+    title: "BYJU'S dashboard",
+    answer: "Built the dashboard page at BYJU'S as an Associate Software Engineer, using React, Redux and Bootstrap.",
+    keywords: ["byjus", "byju", "dashboard", "react", "redux", "bootstrap", "project"],
+    section: "projects",
+  },
+  {
+    id: "proj-byjus-rating",
+    kind: "project",
+    title: "BYJU'S rating & testimonial modules",
+    answer: "Built the rating and testimonial modules at BYJU'S using React, Redux and Bootstrap.",
+    keywords: ["byjus", "byju", "rating", "ratings", "testimonial", "testimonials", "review", "feedback", "react", "redux", "bootstrap", "project"],
+    section: "projects",
+  },
+  {
+    id: "proj-pg",
+    kind: "project",
+    title: "5-Min PG Delivery App",
+    answer:
+      "A quick-delivery app for PG residents, built with React and Firebase. Placing an order sends the room number, building and order details to WhatsApp, along with the payment confirmation.",
+    keywords: ["pg", "delivery", "5 min", "5 minute", "food", "order", "orders", "whatsapp", "firebase", "startup", "side project", "personal", "business", "entrepreneur", "project"],
+    section: "projects",
+  },
+  {
     id: "proj-store",
     kind: "project",
     title: "PW Store (e-commerce)",
@@ -214,7 +257,7 @@ export const KNOWLEDGE: KnowledgeEntry[] = [
     kind: "skill",
     title: "GenAI experience",
     answer:
-      "Yes, on the product frontend side. At PhysicsWallah he built the UI for PW Spam Check, a GenAI-powered answer-sheet verification tool processing data at scale (Next.js, Axios). At Credit Nirvana he builds frontend for the voice-bot flow, including call-recording playback and recording summaries. His focus is turning AI output into clear, trustworthy interfaces.",
+      "Yes, four GenAI products. AskCN (Credit Nirvana): ask for data in plain English or voice, get a generated query, results and performance to re-verify, with CSV/Excel download. Voice Call Analysis (Credit Nirvana): agents record field feedback in any regional language and AI summarises it and converts it to English or Hindi audio for supervisors, while also feeding the outbound voice bot. PW Lecture Decoder (PhysicsWallah): async AI that decodes a lecture and generates a study document. PW Spam Check (PhysicsWallah): GenAI answer-sheet verification at scale. His focus is turning AI output into clear, verifiable, trustworthy interfaces.",
     keywords: ["genai", "gen ai", "generative ai", "ai", "llm", "gpt", "machine learning", "ml", "artificial intelligence", "voice bot", "chatbot", "ai experience", "ai projects"],
     section: "projects",
   },
