@@ -3,7 +3,7 @@
 
 import React, { useEffect, useState } from "react";
 import { Separator } from "@/components/ui/separator";
-import { Github, Instagram, Linkedin, Mail, Twitter } from "lucide-react";
+import { Facebook, Github, Instagram, Linkedin, Mail, Twitter } from "lucide-react";
 
 interface VersionInfo {
   version: string;
@@ -50,7 +50,7 @@ const Footer = () => {
               <Github size={22} />
             </a>
             <a
-              href="https://www.linkedin.com/in/sudip-mishra-11b93013a/"
+              href="https://www.linkedin.com/in/mishrasudip23/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
@@ -59,7 +59,7 @@ const Footer = () => {
               <Linkedin size={22} />
             </a>
             <a
-              href="https://www.instagram.com/babumoshai_023/"
+              href="https://www.instagram.com/mishrasudip23/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"
@@ -68,7 +68,16 @@ const Footer = () => {
               <Instagram size={22} />
             </a>
             <a
-              href="https://x.com/babumosai_23"
+              href="https://www.facebook.com/mishrasudip23/"
+              target="_blank"
+              rel="noopener noreferrer me"
+              aria-label="Facebook"
+              className="text-muted-foreground hover:text-primary transition-colors"
+            >
+              <Facebook size={22} />
+            </a>
+            <a
+              href="https://x.com/mishrasudip23"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Twitter"
@@ -87,12 +96,12 @@ const Footer = () => {
             <p className="text-sm text-muted-foreground">
               Also known as Babumoshai ·{" "}
               <a
-                href="https://www.instagram.com/babumoshai_023/"
+                href="https://www.instagram.com/mishrasudip23/"
                 target="_blank"
                 rel="noopener noreferrer me"
                 className="hover:text-primary transition-colors"
               >
-                Instagram @babumoshai_023
+                Instagram @mishrasudip23
               </a>{" "}
               ·{" "}
               <a
@@ -102,6 +111,23 @@ const Footer = () => {
                 className="hover:text-primary transition-colors"
               >
                 YouTube @mishra.sudip.23
+              </a> ·{" "}
+              <a
+                href="https://www.threads.com/@mishrasudip23"
+                target="_blank"
+                rel="noopener noreferrer me"
+                className="hover:text-primary transition-colors"
+              >
+                Threads @mishrasudip23
+              </a>{" "}
+              ·{" "}
+              <a
+                href="https://linktr.ee/mishrasudip23"
+                target="_blank"
+                rel="noopener noreferrer me"
+                className="hover:text-primary transition-colors"
+              >
+                All my links
               </a>
             </p>
             <p className="text-sm text-muted-foreground">

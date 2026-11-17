@@ -128,17 +128,17 @@
 //                     <Github size={22} />
 //                   </Button>
 //                 </a>
-//                 <a href="https://www.linkedin.com/in/sudip-mishra-11b93013a/" target="_blank" rel="noopener noreferrer">
+//                 <a href="https://www.linkedin.com/in/mishrasudip23/" target="_blank" rel="noopener noreferrer">
 //                   <Button variant="ghost" size="icon" className="rounded-full h-12 w-12 cursor-pointer">
 //                     <Linkedin size={22} />
 //                   </Button>
 //                 </a>
-//                 <a href="https://x.com/babumosai_23" target="_blank" rel="noopener noreferrer">
+//                 <a href="https://x.com/mishrasudip23" target="_blank" rel="noopener noreferrer">
 //                   <Button variant="ghost" size="icon" className="rounded-full h-12 w-12 cursor-pointer">
 //                     <Twitter size={22} />
 //                   </Button>
 //                 </a>
-//                 <a href="https://www.instagram.com/babumoshai_023/" target="_blank" rel="noopener noreferrer">
+//                 <a href="https://www.instagram.com/mishrasudip23/" target="_blank" rel="noopener noreferrer">
 //                   <Button variant="ghost" size="icon" className="rounded-full h-12 w-12 cursor-pointer">
 //                     <Instagram size={22} />
 //                   </Button>
@@ -339,7 +339,7 @@ const HeroSection = () => {
               <Button className="gap-2 px-6 py-6 rounded-full">
                 <ArrowLeft size={18} />
                 <a
-                  href="https://drive.google.com/file/d/1mQSlNMdaQoiim7OAN8XpwIWfPoNIXYdR/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1627jRGG_oS6bAI-EiEJM6kONANLkqRlu/view?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -376,7 +376,7 @@ const HeroSection = () => {
               <Button className="gap-2 px-6 py-6 rounded-full">
                 <ArrowLeft size={18} />
                 <a
-                  href="https://drive.google.com/file/d/1mXUtelxX3DshrjdugtAoXhJriZrhvXH9/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1627jRGG_oS6bAI-EiEJM6kONANLkqRlu/view?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -399,17 +399,17 @@ const HeroSection = () => {
                   </a>
                 </Button>
                 <Button asChild variant="ghost" size="icon">
-                  <a href="https://www.linkedin.com/in/sudip-mishra-11b93013a/" target="_blank">
+                  <a href="https://www.linkedin.com/in/mishrasudip23/" target="_blank">
                     <Linkedin size={22} />
                   </a>
                 </Button>
                 <Button asChild variant="ghost" size="icon">
-                  <a href="https://x.com/babumosai_23" target="_blank">
+                  <a href="https://x.com/mishrasudip23" target="_blank">
                     <Twitter size={22} />
                   </a>
                 </Button>
                 <Button asChild variant="ghost" size="icon">
-                  <a href="https://www.instagram.com/babumoshai_023/" target="_blank">
+                  <a href="https://www.instagram.com/mishrasudip23/" target="_blank">
                     <Instagram size={22} />
                   </a>
                 </Button>

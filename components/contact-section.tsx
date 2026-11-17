@@ -76,17 +76,17 @@
 //                       <Github size={18} />
 //                     </Button>
 //                   </a>
-//                   <a href="https://www.linkedin.com/in/sudip-mishra-11b93013a/" target="_blank" rel="noopener noreferrer">
+//                   <a href="https://www.linkedin.com/in/mishrasudip23/" target="_blank" rel="noopener noreferrer">
 //                     <Button variant="outline" size="icon" className="rounded-full h-10 w-10">
 //                       <Linkedin size={18} />
 //                     </Button>
 //                   </a>
-//                   <a href="https://x.com/babumosai_23" target="_blank" rel="noopener noreferrer">
+//                   <a href="https://x.com/mishrasudip23" target="_blank" rel="noopener noreferrer">
 //                     <Button variant="outline" size="icon" className="rounded-full h-10 w-10">
 //                       <Twitter size={18} />
 //                     </Button>
 //                   </a>
-//                   <a href="https://www.instagram.com/babumoshai_023/" target="_blank" rel="noopener noreferrer">
+//                   <a href="https://www.instagram.com/mishrasudip23/" target="_blank" rel="noopener noreferrer">
 //                 <Button variant="outline" size="icon" className="rounded-full h-10 w-10">
 //                   <Instagram size={18} />
 //                 </Button>
@@ -288,7 +288,7 @@ const ContactSection = () => {
                   </a>
 
                   <a
-                    href="https://www.linkedin.com/in/sudip-mishra-11b93013a/"
+                    href="https://www.linkedin.com/in/mishrasudip23/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -302,7 +302,7 @@ const ContactSection = () => {
                   </a>
 
                   <a
-                    href="https://x.com/babumosai_23"
+                    href="https://x.com/mishrasudip23"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -316,7 +316,7 @@ const ContactSection = () => {
                   </a>
 
                   <a
-                    href="https://www.instagram.com/babumoshai_023/"
+                    href="https://www.instagram.com/mishrasudip23/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >

@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.2.9] - 2026-11-18
+### Added
+- All the handles changed and updated
+- Resume link updated
+- SEO updated
+
 ## [1.2.8] - 2026-11-17
 ### Added
 - SEO added

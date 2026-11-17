@@ -11,6 +11,7 @@ export const SITE = {
   keywords: [
     "Sudip Mishra",
     "Mishra Sudip",
+    "mishrasudip23",
     "babumoshai_023",
     "babumoshai23",
     "Babumoshai",
@@ -25,12 +26,15 @@ export const SITE = {
     "Bengaluru",
   ],
   // other names and handles people may search for
-  alternateNames: ["Mishra Sudip", "Babumoshai", "babumoshai_023", "babumoshai23", "mishra.sudip.23"],
+  alternateNames: ["Mishra Sudip", "mishrasudip23", "Babumoshai", "babumoshai_023", "babumoshai23", "mishra.sudip.23"],
   sameAs: [
     "https://github.com/popeye1235",
-    "https://www.linkedin.com/in/sudip-mishra-11b93013a/",
-    "https://x.com/babumosai_23",
-    "https://www.instagram.com/babumoshai_023/",
+    "https://www.linkedin.com/in/mishrasudip23/",
+    "https://x.com/mishrasudip23",
+    "https://www.instagram.com/mishrasudip23/",
     "https://www.youtube.com/@mishra.sudip.23",
+    "https://www.facebook.com/mishrasudip23/",
+    "https://www.threads.com/@mishrasudip23",
+    "https://linktr.ee/mishrasudip23",
   ],
 };
