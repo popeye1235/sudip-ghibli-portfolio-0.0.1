@@ -1,5 +1,29 @@
 # Changelog
 
+## [1.2.8] - 2026-11-17
+### Added
+- SEO added
+
+## [1.2.7] - 2026-11-17
+### Added
+- Lens feature added
+
+## [1.2.6] - 2026-11-17
+### Added
+- Project section refined
+- New toss image added
+
+## [1.2.5] - 2026-11-17
+### Added
+- New projects added
+- Ask section feature added
+
+## [1.2.4] - 2026-11-17
+### Added
+- Resume updated
+- Experience year Updated
+- Youtube channel link updated
+
 ## [1.2.3] - 2026-05-15
 ### Added
 - Resume updated
